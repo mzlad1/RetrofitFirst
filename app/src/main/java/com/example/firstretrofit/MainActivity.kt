@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun fetchWeather(cityName: String) {
-        weatherService.getWeatherByCity(cityName, "77108619684bf7062202b2c1d1f84899").enqueue(object : Callback<WeatherResponse> {
+        weatherService.getWeatherByCity(cityName, "API_ID").enqueue(object : Callback<WeatherResponse> {
             override fun onResponse(call: Call<WeatherResponse>, response: Response<WeatherResponse>) {
                 if (response.isSuccessful) {
                     val responseBody = response.body()
